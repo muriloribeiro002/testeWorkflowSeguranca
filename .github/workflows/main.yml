@@ -1,4 +1,4 @@
-name: Python Application
+name: Test Python Application
 
 on: [push, pull_request]
 
@@ -13,13 +13,19 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11.4'
+        python-version: '3.x'
 
-    - name: Run the script
-      run: |
-        echo 5 | python main.py
-        echo "+" | python main.py
-        echo 5 | python main.py
+    - name: Test addition
+      run: echo -e "5\n+\n3" | python main.py
 
+    - name: Test subtraction
+      run: echo -e "10\n-\n4" | python main.py
 
+    - name: Test multiplication
+      run: echo -e "6\n*\n2" | python main.py
 
+    - name: Test division
+      run: echo -e "8\n/\n2" | python main.py
+
+    - name: Test division by zero
+      run: echo -e "8\n/\n0" | python main.py
