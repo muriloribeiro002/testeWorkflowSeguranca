@@ -18,7 +18,7 @@ jobs:
     - name: Run the script
       run: |
         echo 5 | python main.py
-        echo + | python main.py
+        echo "+" | python main.py
         echo 5 | python main.py
 
 
