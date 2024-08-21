@@ -17,9 +17,9 @@ jobs:
 
     - name: Run the script
       run: |
-        echo "Digite um numero" | python main.py
-        echo "+" | python main.py
-        echo "5" | python main.py
+        echo 5 | python main.py
+        echo + | python main.py
+        echo 5 | python main.py
 
 
 
